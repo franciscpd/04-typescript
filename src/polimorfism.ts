@@ -2,9 +2,9 @@ interface IConta {
   agencia: string;
   numero: string;
 
-  depositar: Function;
-  retirar: Function;
-  consultarSaldo: Function;
+  depositar: (value: number) => void;
+  retirar: (value: number) => void;
+  consultarSaldo: () => number;
 }
 
 class Conta implements IConta {
@@ -57,18 +57,18 @@ class ContaPoupanca extends Conta {
   }
 }
 
-const contaPoupancaDoFrancis = new ContaPoupanca("123", "456", 1000, 0.09);
+const contaPoupancaDoFrancis = new ContaPoupanca('123', '456', 1000, 0.09);
 contaPoupancaDoFrancis.depositar(1500);
 contaPoupancaDoFrancis.render();
 
 console.log(contaPoupancaDoFrancis.consultarSaldo());
 
 const contaDoFrancis = new ContaCorrente(
-  "1",
-  "123",
+  '1',
+  '123',
   100.0,
   0.1,
-  "essencial",
+  'essencial',
   0.0
 );
 

@@ -5,6 +5,6 @@ interface Car {
   year: number;
 }
 
-interface Gol extends Car {
+export interface Gol extends Car {
   velocity: number;
 }

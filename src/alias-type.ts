@@ -1,4 +1,4 @@
-type numberNullable = number | null;
+export type numberNullable = number | null;
 
 type User = {
   name: string;
@@ -7,7 +7,7 @@ type User = {
   active: boolean;
 };
 
-type UserWithoutEmail = Omit<User, "email">;
+export type UserWithoutEmail = Omit<User, 'email'>;
 
 let user: User;
 
@@ -25,7 +25,7 @@ function updateUser(params: Partial<User>): User {
 
 console.log(
   createUser({
-    name: "Francisross",
+    name: 'Francisross',
     age: 33,
     active: true,
   })
@@ -33,6 +33,6 @@ console.log(
 
 console.log(
   updateUser({
-    email: "franciscpd@gmail.com",
+    email: 'franciscpd@gmail.com',
   })
 );

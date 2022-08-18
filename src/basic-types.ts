@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 // Numérico
 let age: number | null | undefined;
 // Texto
@@ -14,8 +17,8 @@ let person: Object;
 let fn: Function;
 // Enumerado
 enum StatusDelivery {
-  wait = "Aguardando",
-  done = "Finalizado",
+  wait = 'Aguardando',
+  done = 'Finalizado',
 }
 
 function setStatusDelivery(status: StatusDelivery) {

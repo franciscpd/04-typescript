@@ -4,7 +4,7 @@ interface IMarca {
 
 interface IGeladeira extends IMarca {
   cor: string;
-  abrirPorta: Function;
+  abrirPorta: () => void;
 }
 
 class Geladeira implements IGeladeira {
@@ -24,12 +24,14 @@ class Geladeira implements IGeladeira {
     public cor: string
   ) {}
 
-  abrirPorta() {}
+  abrirPorta() {
+    console.log('Abriu');
+  }
 }
 
-const consul = new Geladeira("Consul", undefined, "Branca");
+const consul = new Geladeira('Consul', undefined, 'Branca');
 
-const samsung = new Geladeira("Samsung", 2, "Inox");
+const samsung = new Geladeira('Samsung', 2, 'Inox');
 
 console.table({
   consul,
